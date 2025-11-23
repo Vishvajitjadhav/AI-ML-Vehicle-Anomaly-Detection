@@ -188,7 +188,7 @@ Joblib
 
 This shows dataset loading, cleaning, splitting, and preprocessing.
 
-![Preprocess Output](D:\Software Developer\My-Project\AI_ML\AI-ML-Vehicle-Anomaly-Detection\data\Screenshot 2025-11-23 000103.png)
+![Preprocess Output](https://github.com/Vishvajitjadhav/AI-ML-Vehicle-Anomaly-Detection/blob/main/data/Screenshot%202025-11-23%20000103.png)
 
 2. Model Training Output
 
