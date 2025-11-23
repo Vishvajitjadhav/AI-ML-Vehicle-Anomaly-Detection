@@ -1,32 +1,35 @@
-🚗 Vehicle Sensor Anomaly Detection (AI/ML + FastAPI + Docker)
+# 🚗 Vehicle Sensor Anomaly Detection (AI/ML + FastAPI + Docker)
 
-A complete end-to-end Machine Learning workflow for detecting abnormal vehicle sensor behavior.
-Designed to simulate automotive predictive maintenance, matching real ARAI-style AI/ML projects.
+A complete end-to-end **Machine Learning workflow** for detecting abnormal vehicle sensor behavior.  
+Designed to simulate **automotive predictive maintenance**, matching real ARAI-style AI/ML projects.
 
 This system uses:
 
-Python (ML Model)
+- **Python (ML Model)**
+- **Scikit-learn**
+- **FastAPI** for inference
+- **Docker** for deployment
+- **WSL2** backend (for Windows users)
 
-Scikit-learn
+---
 
-FastAPI for inference
+## ✨ Features
 
-Docker for deployment
+✔ Synthetic automotive sensor dataset  
+✔ Data preprocessing (cleaning, outliers, scaling)  
+✔ ML model (Random Forest)  
+✔ Model evaluation (Accuracy, Recall, F1)  
+✔ Inference pipeline  
+✔ FastAPI microservice  
+✔ Docker deployment-ready  
+✔ Realistic automotive use-case: anomaly detection  
 
-WSL2 backend (for Windows users)
+---
 
-✨ Features
+## 📁 Project Structure
 
-✔ Synthetic automotive sensor dataset
-✔ Data preprocessing (cleaning, outliers, scaling)
-✔ ML model (Random Forest)
-✔ Model evaluation (Accuracy, Recall, F1)
-✔ Inference pipeline
-✔ FastAPI microservice
-✔ Docker deployment-ready
-✔ Realistic automotive use-case: anomaly detection
+```
 
-📁 Project Structure
 AI-ML-Vehicle-Anomaly-Detection/
 │
 ├── data/
@@ -47,169 +50,229 @@ AI-ML-Vehicle-Anomaly-Detection/
 ├── requirements.txt
 └── README.md
 
-⚙️ Setup Instructions
-1️⃣ Create Virtual Environment
-python -m venv venv
+````
 
+---
+
+## ⚙️ Setup Instructions
+
+### 1️⃣ Create Virtual Environment
+
+```bash
+python -m venv venv
+````
 
 Activate (Windows):
 
+```bash
 venv\Scripts\activate
+```
 
-2️⃣ Install Required Libraries
+---
+
+### 2️⃣ Install Required Libraries
+
+```bash
 pip install -r requirements.txt
+```
 
-3️⃣ Generate Dataset
+---
+
+### 3️⃣ Generate Dataset
+
+```bash
 python src/generate_data.py
-
+```
 
 Dataset saved to:
 
+```
 data/vehicle_sensor_data.csv
+```
 
-4️⃣ Preprocess the Data
+---
+
+### 4️⃣ Preprocess the Data
+
+```bash
 python src/preprocess.py
+```
 
-5️⃣ Train the ML Model
+---
+
+### 5️⃣ Train the ML Model
+
+```bash
 python src/train_model.py
-
+```
 
 Saves:
 
+```
 models/anomaly_model.pkl
 models/scaler.pkl
+```
 
-6️⃣ Run Inference (Without Docker)
+---
+
+### 6️⃣ Run Inference (Without Docker)
+
+```bash
 python src/inference.py
+```
 
-🧪 API (FastAPI)
-Start API (inside Docker):
+---
+
+## 🧪 API (FastAPI)
+
+### Start API (inside Docker):
+
+```bash
 docker run -p 8000:8000 vehicle-ml-api
+```
 
-Root endpoint:
+---
+
+### Root endpoint:
+
+```
 GET http://localhost:8000/
-
+```
 
 Response:
 
+```json
 {"message": "Vehicle Anomaly Detection API Running"}
+```
 
-Prediction endpoint:
+---
+
+### Prediction endpoint:
+
+```
 GET http://localhost:8000/predict?rpm=4500&speed=120&coolant_temp=118&engine_load=85&vibration=0.15&battery_voltage=9.1
-
+```
 
 Response:
 
+```json
 {
   "status": "ANOMALY DETECTED — Possible fault in engine/sensors"
 }
+```
 
-📊 Model Performance
+---
 
-Accuracy: ~95%
+## 📊 Model Performance
 
-Precision: ~90%
+* **Accuracy:** ~95%
+* **Precision:** ~90%
+* **Recall:** ~96% (very important for safety)
+* **F1 Score:** ~93%
 
-Recall: ~96% (very important for safety)
+High recall ensures fewer missed faults, which is critical for automotive safety.
 
-F1 Score: ~93%
+---
 
-High recall ensures fewer missed faults, which is critical in automotive safety systems.
+## 🐳 Docker Deployment
 
-🐳 Docker Deployment
-Build Docker Image:
+### Build Docker Image:
+
+```bash
 docker build -t vehicle-ml-api .
+```
 
-Run Container:
+### Run Container:
+
+```bash
 docker run -p 8000:8000 vehicle-ml-api
-
+```
 
 API available at:
 
+```
 http://localhost:8000
+```
 
-🚘 Automotive Context (Interview Explanation)
+---
 
-This project simulates real vehicle telemetry:
+## 🚘 Automotive Context (Interview Explanation)
 
-RPM
+This project simulates **real vehicle telemetry**:
 
-Speed
-
-Coolant temperature
-
-Engine load
-
-Vibration
-
-Battery voltage
+* RPM
+* Speed
+* Coolant temperature
+* Engine load
+* Vibration
+* Battery voltage
 
 ML model classifies:
 
-0 → Normal operation
+* **0 → Normal operation**
+* **1 → Anomaly detected** (possible engine/sensor fault)
 
-1 → Anomaly detected (possible engine/sensor fault)
+This is similar to predictive maintenance workflows used in automotive R&D labs like **ARAI**.
 
-This is similar to predictive maintenance workflows used in automotive R&D labs like ARAI.
+---
 
-🧠 Interview-Ready Explanation
+## 🧠 Interview-Ready Explanation
 
-“I built a complete AI/ML workflow for automotive anomaly detection.
-It includes data preprocessing, model training, validation, inference pipeline, and Dockerized deployment.
-The microservice uses FastAPI and can be deployed on Linux or cloud/on-prem servers, matching ARAI’s ML workflow architecture.”
+> “I built a complete AI/ML workflow for automotive anomaly detection.
+> It includes data preprocessing, model training, validation, inference pipeline, and Dockerized deployment.
+> The microservice uses FastAPI and can be deployed on Linux or cloud/on-prem servers, matching ARAI’s ML workflow architecture.”
 
-🛠️ Technologies Used
+---
 
-Python
+## 🛠️ Technologies Used
 
-NumPy, Pandas
+* Python
+* NumPy, Pandas
+* Scikit-Learn
+* FastAPI
+* Uvicorn
+* Docker
+* WSL2
+* Joblib
 
-Scikit-Learn
+---
 
-FastAPI
+## 🖼️ Screenshots (Execution Proof)
 
-Uvicorn
+### 1️⃣ Preprocessing Output
 
-Docker
+![Preprocess Output](https://raw.githubusercontent.com/<your-username>/<repo-name>/main/screenshots/preprocess.png)
 
-WSL2
+---
 
-Joblib
+### 2️⃣ Model Training Output
 
-✅ Status
+![Training Output](https://raw.githubusercontent.com/<your-username>/<repo-name>/main/screenshots/training.png)
+
+---
+
+### 3️⃣ Docker Build + API Startup
+
+![Docker Run API](https://raw.githubusercontent.com/<your-username>/<repo-name>/main/screenshots/docker.png)
+
+---
+
+### 4️⃣ Root Endpoint Running
+
+![API Root](https://raw.githubusercontent.com/<your-username>/<repo-name>/main/screenshots/root.png)
+
+---
+
+### 5️⃣ Prediction Endpoint Working
+
+![Prediction Output](https://raw.githubusercontent.com/<your-username>/<repo-name>/main/screenshots/prediction.png)
+
+---
+
+## ✅ Status
 
 ✔ Fully working
 ✔ Docker-ready
 ✔ Interview-ready
 ✔ Deployable ML microservice
 
-🖼️ Screenshots (Execution Proof)
-1. Preprocessing Output
-
-This shows dataset loading, cleaning, splitting, and preprocessing.
-
-![Preprocess Output](D:\Software Developer\My-Project\AI_ML\AI-ML-Vehicle-Anomaly-Detection\data\Screenshot 2025-11-23 000103.png)
-
-2. Model Training Output
-
-This shows model metrics (Accuracy, Recall, F1 Score).
-
-![Training Output](/mnt/data/Screenshot 2025-11-23 000540.png)
-
-3. Docker Build + API Startup
-
-This confirms that the FastAPI service is running successfully inside Docker.
-
-![Docker Run API](/mnt/data/Screenshot 2025-11-23 114715.png)
-
-4. Root Endpoint Running (localhost:8000)
-
-This shows that the API is running and accessible.
-
-![API Root](/mnt/data/Screenshot 2025-11-23 114820.png)
-
-5. Prediction Endpoint Working
-
-This shows a real anomaly detection output via API.
-
-![Prediction Output](/mnt/data/Screenshot 2025-11-23 114919.png)
