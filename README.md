@@ -241,31 +241,41 @@ This is similar to predictive maintenance workflows used in automotive R&D labs 
 
 ### 1️⃣ Preprocessing Output
 
-![Preprocess Output](https://raw.githubusercontent.com/<your-username>/<repo-name>/main/screenshots/preprocess.png)
+This shows dataset loading, cleaning, splitting, and preprocessing.
+
+![Preprocess Output](https://github.com/Vishvajitjadhav/AI-ML-Vehicle-Anomaly-Detection/blob/main/data/Screenshot%202025-11-23%20000103.png)
 
 ---
 
 ### 2️⃣ Model Training Output
 
-![Training Output](https://raw.githubusercontent.com/<your-username>/<repo-name>/main/screenshots/training.png)
+This shows model metrics (Accuracy, Recall, F1 Score).
+
+![Training Output](https://github.com/Vishvajitjadhav/AI-ML-Vehicle-Anomaly-Detection/blob/main/data/Screenshot%202025-11-23%20000540.png)
 
 ---
 
 ### 3️⃣ Docker Build + API Startup
 
-![Docker Run API](https://raw.githubusercontent.com/<your-username>/<repo-name>/main/screenshots/docker.png)
+This confirms that the FastAPI service is running successfully inside Docker.
+
+![Docker Run API](https://github.com/Vishvajitjadhav/AI-ML-Vehicle-Anomaly-Detection/blob/main/data/Screenshot%202025-11-23%20114715.png)
 
 ---
 
 ### 4️⃣ Root Endpoint Running
 
-![API Root](https://raw.githubusercontent.com/<your-username>/<repo-name>/main/screenshots/root.png)
+This shows that the API is running and accessible.
+
+![API Root](https://github.com/Vishvajitjadhav/AI-ML-Vehicle-Anomaly-Detection/blob/main/data/Screenshot%202025-11-23%20114820.png)
 
 ---
 
 ### 5️⃣ Prediction Endpoint Working
 
-![Prediction Output](https://raw.githubusercontent.com/<your-username>/<repo-name>/main/screenshots/prediction.png)
+This shows a real anomaly detection output via API.
+
+![Prediction Output](https://github.com/Vishvajitjadhav/AI-ML-Vehicle-Anomaly-Detection/blob/main/data/Screenshot%202025-11-23%20114919.png)
 
 ---
 
@@ -276,36 +286,5 @@ This is similar to predictive maintenance workflows used in automotive R&D labs 
 ✔ Interview-ready
 ✔ Deployable ML microservice
 
-<<<<<<< HEAD
-=======
-🖼️ Screenshots (Execution Proof)
-1. Preprocessing Output
 
-This shows dataset loading, cleaning, splitting, and preprocessing.
-
-![Preprocess Output](https://github.com/Vishvajitjadhav/AI-ML-Vehicle-Anomaly-Detection/blob/main/data/Screenshot%202025-11-23%20000103.png)
-
-2. Model Training Output
-
-This shows model metrics (Accuracy, Recall, F1 Score).
-
-![Training Output](https://github.com/Vishvajitjadhav/AI-ML-Vehicle-Anomaly-Detection/blob/main/data/Screenshot%202025-11-23%20000540.png)
-
-3. Docker Build + API Startup
-
-This confirms that the FastAPI service is running successfully inside Docker.
-
-![Docker Run API](https://github.com/Vishvajitjadhav/AI-ML-Vehicle-Anomaly-Detection/blob/main/data/Screenshot%202025-11-23%20114715.png)
-
-4. Root Endpoint Running (localhost:8000)
-
-This shows that the API is running and accessible.
-
-![API Root](https://github.com/Vishvajitjadhav/AI-ML-Vehicle-Anomaly-Detection/blob/main/data/Screenshot%202025-11-23%20114820.png)
-
-5. Prediction Endpoint Working
-
-This shows a real anomaly detection output via API.
-
-![Prediction Output](https://github.com/Vishvajitjadhav/AI-ML-Vehicle-Anomaly-Detection/blob/main/data/Screenshot%202025-11-23%20114919.png)
->>>>>>> da41e6a6baa4b4657bc381105077764fc88f7bd9
+By Vishvajit Ajit Jadhav
